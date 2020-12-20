@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg_main">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fitsSystemWindows="false">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/app_name"
+                android:textSize="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amaranth" />
+            <TextView
+                android:id="@+id/pname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular Movies"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:layout_below="@id/app_name"
+                android:fontFamily="@font/amaranth"
+                android:textSize="16sp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popularList"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/pname"/>
+            <TextView
+                android:id="@+id/tname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Popular TV Shows"
+                android:layout_margin="10dp"
+                android:textColor="@color/white"
+                android:layout_below="@id/popularList"
+                android:fontFamily="@font/amaranth"
+                android:textSize="16sp"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/popularT_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tname"/>
+            <TextView
+                android:id="@+id/trendtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trending Shows"
+                android:textSize="16sp"
+                android:fontFamily="@font/amaranth"
+                android:layout_below="@id/popularT_list"
+                android:textColor="@color/white"
+                android:layout_margin="10dp"/>
+           <androidx.recyclerview.widget.RecyclerView
+               android:id="@+id/trendContent"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_below="@id/trendtitle"/>
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>
