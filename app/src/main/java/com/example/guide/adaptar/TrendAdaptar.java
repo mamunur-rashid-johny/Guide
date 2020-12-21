@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -40,7 +41,7 @@ public class TrendAdaptar extends RecyclerView.Adapter<TrendAdaptar.ViewHolder> 
         if (result_trends.get(position).getMediaType().equals("movie")){
 
             holder.title.setText(result_trends.get(position).getOriginalTitle());
-            holder.date.setText(result_trends.get(position).getReleaseDate().replace("-","/"));
+            holder.date.setText(result_trends.get(position).getReleaseDate());
             holder.vote.setText(result_trends.get(position).getVoteCount().toString());
             Glide.with(context).load(Constant.IMAGE_URL+result_trends.get(position).getPosterPath()).into(holder.poster);
 
@@ -52,6 +53,7 @@ public class TrendAdaptar extends RecyclerView.Adapter<TrendAdaptar.ViewHolder> 
             Glide.with(context).load(Constant.IMAGE_URL+result_trends.get(position).getPosterPath()).into(holder.poster);
         }
 
+
     }
 
     @Override
@@ -62,14 +64,14 @@ public class TrendAdaptar extends RecyclerView.Adapter<TrendAdaptar.ViewHolder> 
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView title,date,vote;
         ImageView poster;
-        CardView cardView;
+        RelativeLayout cardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.mTitle);
             date = itemView.findViewById(R.id.r_date);
             vote = itemView.findViewById(R.id.vote_count);
             poster = itemView.findViewById(R.id.poster);
-            cardView = itemView.findViewById(R.id.movieCard);
+            cardView = itemView.findViewById(R.id.cardview);
         }
     }
 }

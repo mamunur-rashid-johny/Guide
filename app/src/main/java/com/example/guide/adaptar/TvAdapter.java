@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -37,7 +38,7 @@ public class TvAdapter extends RecyclerView.Adapter<TvAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.title.setText(tvResults.get(position).getName());
-        holder.date.setText(tvResults.get(position).getFirstAirDate().replace("-","/"));
+        holder.date.setText(tvResults.get(position).getFirstAirDate());
         holder.vote.setText(tvResults.get(position).getVoteCount().toString());
         Glide.with(context).load(Constant.IMAGE_URL+tvResults.get(position).getPosterPath()).into(holder.poster);
 
@@ -58,14 +59,14 @@ public class TvAdapter extends RecyclerView.Adapter<TvAdapter.ViewHolder> {
     public class ViewHolder extends RecyclerView.ViewHolder{
         TextView title,date,vote;
         ImageView poster;
-        CardView cardView;
+        RelativeLayout cardView;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = itemView.findViewById(R.id.mTitle);
             date = itemView.findViewById(R.id.r_date);
             vote = itemView.findViewById(R.id.vote_count);
             poster = itemView.findViewById(R.id.poster);
-            cardView = itemView.findViewById(R.id.movieCard);
+            cardView = itemView.findViewById(R.id.cardview);
         }
     }
 }

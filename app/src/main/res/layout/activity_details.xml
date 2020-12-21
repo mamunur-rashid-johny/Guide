@@ -1,10 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/detail_grad"
     tools:context=".Details">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/dbPoster"
+            android:layout_width="match_parent"
+            android:scaleType="centerCrop"
+            android:layout_height="250dp"
+            android:src="@drawable/detail_grad" />
+
+        <ImageView
+            android:id="@+id/dPoster"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="148dp"
+            android:src="@drawable/detail_grad" />
+
+        <TextView
+            android:id="@+id/dTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dPoster"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/amaranth"
+            android:text="Movie Name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/nestLayout"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/dTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20sp"
+                android:src="@drawable/ic_baseline_star_24"/>
+            <TextView
+                android:id="@+id/rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/amaranth"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/runTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/amaranth"
+                android:text="&#8226; Run Time"/>
+            <TextView
+                android:id="@+id/release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/amaranth"
+                android:text="&#8226; Date"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/doverview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="overview"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/amaranth"
+            android:textColor="@color/white"
+            android:layout_below="@id/nestLayout"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/dgenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genes"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/amaranth"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_below="@id/doverview"/>
+
+        <ImageView
+            android:id="@+id/dwatchList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"/>
+        <ImageView
+            android:id="@+id/backImage"
+            android:layout_margin="15dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
