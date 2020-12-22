@@ -1,6 +1,7 @@
 package com.example.guide.adaptar;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.guide.R;
+import com.example.guide.Tv_Detail;
 import com.example.guide.helper.Constant;
 import com.example.guide.model.TvResult;
 
@@ -45,7 +47,7 @@ public class TvAdapter extends RecyclerView.Adapter<TvAdapter.ViewHolder> {
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(context,tvResults.get(position).getName(),Toast.LENGTH_SHORT).show();
+                context.startActivity(new Intent(context, Tv_Detail.class).putExtra("tv_id",tvResults.get(position).getId().toString()));
             }
         });
 

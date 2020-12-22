@@ -4,6 +4,7 @@ import com.example.guide.model.Movie;
 import com.example.guide.model.Trend;
 import com.example.guide.model.Tv;
 import com.example.guide.model.detail_movie.MovieDetail;
+import com.example.guide.model.tv_detail.TvDeatilModel;
 
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -24,4 +25,7 @@ public interface ApiInterface {
 
     @GET("movie/{id}")
     Call<MovieDetail> getMovieDetail(@Path("id") int id,@Query("api_key") String api_key);
+
+    @GET("tv/{id}")
+    Call<TvDeatilModel> getTv(@Path("id") int id, @Query("api_key") String api_key);
 }

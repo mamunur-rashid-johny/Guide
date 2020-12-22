@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Guide">
-        <activity android:name=".WatchList"></activity>
+        <activity android:name=".Tv_Detail"></activity>
+        <activity android:name=".WatchList" />
         <activity android:name=".Details" />
         <activity android:name=".MainActivity">
             <intent-filter>

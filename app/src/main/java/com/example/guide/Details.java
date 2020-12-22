@@ -67,7 +67,7 @@ public class Details extends AppCompatActivity {
                     dtitle.setText(response.body().getTitle());
                     rating.setText(response.body().getVoteAverage().toString());
                     runtime.setText("\u2022 "+response.body().getRuntime().toString());
-                    r_date.setText("\u2022 "+response.body().getReleaseDate());
+                    r_date.setText("\u2022 "+response.body().getReleaseDate().split("-")[0]);
                     dover.setText(response.body().getOverview());
                     for (Genre genre:response.body().getGenres()){
                         dGenre =dGenre+" "+genre.getName();

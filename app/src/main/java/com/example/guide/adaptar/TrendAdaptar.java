@@ -1,6 +1,7 @@
 package com.example.guide.adaptar;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,13 +10,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.guide.Details;
 import com.example.guide.R;
 import com.example.guide.helper.Constant;
 import com.example.guide.model.Result_trend;
+import com.example.guide.Tv_Detail;
 
 import java.util.List;
 
@@ -47,11 +49,23 @@ public class TrendAdaptar extends RecyclerView.Adapter<TrendAdaptar.ViewHolder> 
 
         }
         else{
-                        holder.title.setText(result_trends.get(position).getName());
+            holder.title.setText(result_trends.get(position).getName());
             holder.date.setText(result_trends.get(position).getFirstAirDate().replace("-","/"));
             holder.vote.setText(result_trends.get(position).getVoteCount().toString());
             Glide.with(context).load(Constant.IMAGE_URL+result_trends.get(position).getPosterPath()).into(holder.poster);
         }
+
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (result_trends.get(position).getMediaType().equals("tv")){
+                    context.startActivity(new Intent(context, Tv_Detail.class).putExtra("tv_id",result_trends.get(position).getId().toString()));
+                }
+                else {
+                    context.startActivity(new Intent(context, Details.class).putExtra("id",result_trends.get(position).getId().toString()));
+                }
+            }
+        });
 
 
     }

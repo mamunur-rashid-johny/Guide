@@ -27,6 +27,7 @@ import com.example.guide.webservices.ApiInterface;
 
 import java.util.List;
 
+import ir.alirezabdn.wp7progress.WP10ProgressBar;
 import ir.alirezabdn.wp7progress.WP7ProgressBar;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     List<Result> results;
     List<TvResult> tvResults;
     List<Result_trend> result_trends;
-    WP7ProgressBar progressBar;
+    WP10ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
 
         movie_rec.setLayoutManager(new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false));
         tv_rec.setLayoutManager(new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false));
-        trend_rec.setLayoutManager(new LinearLayoutManager(MainActivity.this));
+        trend_rec.setLayoutManager(new LinearLayoutManager(MainActivity.this,LinearLayoutManager.HORIZONTAL,false));
 
         if (NetworkReceiver.isConnected()){
             getMoviesList();

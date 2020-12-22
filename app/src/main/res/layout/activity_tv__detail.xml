@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_main"
+    tools:context=".Details">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <ImageView
+            android:id="@+id/tdPoster"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="148dp"
+            android:src="@drawable/detail_grad" />
+
+        <TextView
+            android:id="@+id/dtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tdPoster"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/amaranth"
+            android:text="Movie Name"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:id="@+id/nestLayout"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/dtTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20sp"
+                android:src="@drawable/ic_baseline_star_24"/>
+            <TextView
+                android:id="@+id/trating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rating"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/amaranth"
+                android:textColor="@color/white"/>
+            <TextView
+                android:id="@+id/trelease_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_marginStart="10dp"
+                android:fontFamily="@font/amaranth"
+                android:text="&#8226; Date"/>
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/tdoverview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="overview"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/amaranth"
+            android:textColor="@color/white"
+            android:layout_below="@id/nestLayout"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/tdgenre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genes"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/amaranth"
+            android:textColor="@color/white"
+            android:layout_margin="10dp"
+            android:layout_below="@id/tdoverview"/>
+        <TextView
+            android:layout_below="@+id/tdgenre"
+            android:id="@+id/tseason"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/amaranth"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Season"/>
+
+        <ImageView
+            android:id="@+id/dwatchList"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_plus"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"/>
+        <ImageView
+            android:id="@+id/backImage"
+            android:layout_margin="15dp"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"/>
+    </RelativeLayout>
+</androidx.core.widget.NestedScrollView>
