@@ -1,8 +1,10 @@
-package com.example.guide;
+package com.example.guide.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.guide.R;
 
 public class WatchList extends AppCompatActivity {
 

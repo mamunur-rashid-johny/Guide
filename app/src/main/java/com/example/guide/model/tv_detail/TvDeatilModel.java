@@ -8,207 +8,344 @@ import java.util.List;
 public class TvDeatilModel {
     @SerializedName("backdrop_path")
     @Expose
-    public Object backdropPath;
+    private String backdropPath;
     @SerializedName("created_by")
     @Expose
-    public List<Object> createdBy = null;
+    private List<CreatedBy> createdBy = null;
     @SerializedName("episode_run_time")
     @Expose
-    public List<Integer> episodeRunTime = null;
+    private List<Integer> episodeRunTime = null;
     @SerializedName("first_air_date")
     @Expose
-    public String firstAirDate;
+    private String firstAirDate;
     @SerializedName("genres")
     @Expose
-    public List<Genre> genres = null;
+    private List<Genre> genres = null;
     @SerializedName("homepage")
     @Expose
-    public String homepage;
+    private String homepage;
     @SerializedName("id")
     @Expose
-    public Integer id;
+    private Integer id;
     @SerializedName("in_production")
     @Expose
-    public Boolean inProduction;
+    private Boolean inProduction;
     @SerializedName("languages")
     @Expose
-    public List<String> languages = null;
+    private List<String> languages = null;
     @SerializedName("last_air_date")
     @Expose
-    public String lastAirDate;
+    private String lastAirDate;
     @SerializedName("last_episode_to_air")
     @Expose
-    public List<LastEpisodeToAir> lastEpisodeToAir = null;
+    private LastEpisodeToAir lastEpisodeToAir;
     @SerializedName("name")
     @Expose
-    public String name;
+    private String name;
     @SerializedName("next_episode_to_air")
     @Expose
-    public Object nextEpisodeToAir;
+    private Object nextEpisodeToAir;
     @SerializedName("networks")
     @Expose
-    public List<Network> networks = null;
+    private List<Network> networks = null;
     @SerializedName("number_of_episodes")
     @Expose
-    public Integer numberOfEpisodes;
+    private Integer numberOfEpisodes;
     @SerializedName("number_of_seasons")
     @Expose
-    public Integer numberOfSeasons;
+    private Integer numberOfSeasons;
     @SerializedName("origin_country")
     @Expose
-    public List<String> originCountry = null;
+    private List<String> originCountry = null;
     @SerializedName("original_language")
     @Expose
-    public String originalLanguage;
+    private String originalLanguage;
     @SerializedName("original_name")
     @Expose
-    public String originalName;
+    private String originalName;
     @SerializedName("overview")
     @Expose
-    public String overview;
+    private String overview;
     @SerializedName("popularity")
     @Expose
-    public Double popularity;
+    private Double popularity;
     @SerializedName("poster_path")
     @Expose
-    public Object posterPath;
+    private String posterPath;
     @SerializedName("production_companies")
     @Expose
-    public List<ProductionCompany> productionCompanies = null;
+    private List<ProductionCompany> productionCompanies = null;
     @SerializedName("production_countries")
     @Expose
-    public List<Object> productionCountries = null;
+    private List<ProductionCountry> productionCountries = null;
     @SerializedName("seasons")
     @Expose
-    public List<Season> seasons = null;
+    private List<Season> seasons = null;
     @SerializedName("spoken_languages")
     @Expose
-    public List<SpokenLanguage> spokenLanguages = null;
+    private List<SpokenLanguage> spokenLanguages = null;
     @SerializedName("status")
     @Expose
-    public String status;
+    private String status;
     @SerializedName("tagline")
     @Expose
-    public String tagline;
+    private String tagline;
     @SerializedName("type")
     @Expose
-    public String type;
+    private String type;
     @SerializedName("vote_average")
     @Expose
-    public Double voteAverage;
+    private Double voteAverage;
     @SerializedName("vote_count")
     @Expose
-    public Integer voteCount;
+    private Integer voteCount;
 
-    public class Genre {
-
-        @SerializedName("id")
-        @Expose
-        public Integer id;
-        @SerializedName("name")
-        @Expose
-        public String name;
+    public String getBackdropPath() {
+        return backdropPath;
     }
 
-    public class LastEpisodeToAir {
-
-        @SerializedName("air_date")
-        @Expose
-        public String airDate;
-        @SerializedName("episode_number")
-        @Expose
-        public Integer episodeNumber;
-        @SerializedName("id")
-        @Expose
-        public Integer id;
-        @SerializedName("name")
-        @Expose
-        public String name;
-        @SerializedName("overview")
-        @Expose
-        public String overview;
-        @SerializedName("production_code")
-        @Expose
-        public String productionCode;
-        @SerializedName("season_number")
-        @Expose
-        public Integer seasonNumber;
-        @SerializedName("still_path")
-        @Expose
-        public Object stillPath;
-        @SerializedName("vote_average")
-        @Expose
-        public Double voteAverage;
-        @SerializedName("vote_count")
-        @Expose
-        public Integer voteCount;
+    public void setBackdropPath(String backdropPath) {
+        this.backdropPath = backdropPath;
     }
 
-    public class Network {
-
-        @SerializedName("name")
-        @Expose
-        public String name;
-        @SerializedName("id")
-        @Expose
-        public Integer id;
-        @SerializedName("logo_path")
-        @Expose
-        public String logoPath;
-        @SerializedName("origin_country")
-        @Expose
-        public String originCountry;
-
+    public List<CreatedBy> getCreatedBy() {
+        return createdBy;
     }
-    public class ProductionCompany {
 
-        @SerializedName("id")
-        @Expose
-        public Integer id;
-        @SerializedName("logo_path")
-        @Expose
-        public Object logoPath;
-        @SerializedName("name")
-        @Expose
-        public String name;
-        @SerializedName("origin_country")
-        @Expose
-        public String originCountry;
+    public void setCreatedBy(List<CreatedBy> createdBy) {
+        this.createdBy = createdBy;
     }
-    public class Season {
 
-        @SerializedName("air_date")
-        @Expose
-        public Object airDate;
-        @SerializedName("episode_count")
-        @Expose
-        public Integer episodeCount;
-        @SerializedName("id")
-        @Expose
-        public Integer id;
-        @SerializedName("name")
-        @Expose
-        public String name;
-        @SerializedName("overview")
-        @Expose
-        public String overview;
-        @SerializedName("poster_path")
-        @Expose
-        public Object posterPath;
-        @SerializedName("season_number")
-        @Expose
-        public Integer seasonNumber;
+    public List<Integer> getEpisodeRunTime() {
+        return episodeRunTime;
     }
-    public class SpokenLanguage {
 
-        @SerializedName("english_name")
-        @Expose
-        public String englishName;
-        @SerializedName("iso_639_1")
-        @Expose
-        public String iso6391;
-        @SerializedName("name")
-        @Expose
-        public String name;
+    public void setEpisodeRunTime(List<Integer> episodeRunTime) {
+        this.episodeRunTime = episodeRunTime;
     }
+
+    public String getFirstAirDate() {
+        return firstAirDate;
+    }
+
+    public void setFirstAirDate(String firstAirDate) {
+        this.firstAirDate = firstAirDate;
+    }
+
+    public List<Genre> getGenres() {
+        return genres;
+    }
+
+    public void setGenres(List<Genre> genres) {
+        this.genres = genres;
+    }
+
+    public String getHomepage() {
+        return homepage;
+    }
+
+    public void setHomepage(String homepage) {
+        this.homepage = homepage;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Boolean getInProduction() {
+        return inProduction;
+    }
+
+    public void setInProduction(Boolean inProduction) {
+        this.inProduction = inProduction;
+    }
+
+    public List<String> getLanguages() {
+        return languages;
+    }
+
+    public void setLanguages(List<String> languages) {
+        this.languages = languages;
+    }
+
+    public String getLastAirDate() {
+        return lastAirDate;
+    }
+
+    public void setLastAirDate(String lastAirDate) {
+        this.lastAirDate = lastAirDate;
+    }
+
+    public LastEpisodeToAir getLastEpisodeToAir() {
+        return lastEpisodeToAir;
+    }
+
+    public void setLastEpisodeToAir(LastEpisodeToAir lastEpisodeToAir) {
+        this.lastEpisodeToAir = lastEpisodeToAir;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Object getNextEpisodeToAir() {
+        return nextEpisodeToAir;
+    }
+
+    public void setNextEpisodeToAir(Object nextEpisodeToAir) {
+        this.nextEpisodeToAir = nextEpisodeToAir;
+    }
+
+    public List<Network> getNetworks() {
+        return networks;
+    }
+
+    public void setNetworks(List<Network> networks) {
+        this.networks = networks;
+    }
+
+    public Integer getNumberOfEpisodes() {
+        return numberOfEpisodes;
+    }
+
+    public void setNumberOfEpisodes(Integer numberOfEpisodes) {
+        this.numberOfEpisodes = numberOfEpisodes;
+    }
+
+    public Integer getNumberOfSeasons() {
+        return numberOfSeasons;
+    }
+
+    public void setNumberOfSeasons(Integer numberOfSeasons) {
+        this.numberOfSeasons = numberOfSeasons;
+    }
+
+    public List<String> getOriginCountry() {
+        return originCountry;
+    }
+
+    public void setOriginCountry(List<String> originCountry) {
+        this.originCountry = originCountry;
+    }
+
+    public String getOriginalLanguage() {
+        return originalLanguage;
+    }
+
+    public void setOriginalLanguage(String originalLanguage) {
+        this.originalLanguage = originalLanguage;
+    }
+
+    public String getOriginalName() {
+        return originalName;
+    }
+
+    public void setOriginalName(String originalName) {
+        this.originalName = originalName;
+    }
+
+    public String getOverview() {
+        return overview;
+    }
+
+    public void setOverview(String overview) {
+        this.overview = overview;
+    }
+
+    public Double getPopularity() {
+        return popularity;
+    }
+
+    public void setPopularity(Double popularity) {
+        this.popularity = popularity;
+    }
+
+    public String getPosterPath() {
+        return posterPath;
+    }
+
+    public void setPosterPath(String posterPath) {
+        this.posterPath = posterPath;
+    }
+
+    public List<ProductionCompany> getProductionCompanies() {
+        return productionCompanies;
+    }
+
+    public void setProductionCompanies(List<ProductionCompany> productionCompanies) {
+        this.productionCompanies = productionCompanies;
+    }
+
+    public List<ProductionCountry> getProductionCountries() {
+        return productionCountries;
+    }
+
+    public void setProductionCountries(List<ProductionCountry> productionCountries) {
+        this.productionCountries = productionCountries;
+    }
+
+    public List<Season> getSeasons() {
+        return seasons;
+    }
+
+    public void setSeasons(List<Season> seasons) {
+        this.seasons = seasons;
+    }
+
+    public List<SpokenLanguage> getSpokenLanguages() {
+        return spokenLanguages;
+    }
+
+    public void setSpokenLanguages(List<SpokenLanguage> spokenLanguages) {
+        this.spokenLanguages = spokenLanguages;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getTagline() {
+        return tagline;
+    }
+
+    public void setTagline(String tagline) {
+        this.tagline = tagline;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Double getVoteAverage() {
+        return voteAverage;
+    }
+
+    public void setVoteAverage(Double voteAverage) {
+        this.voteAverage = voteAverage;
+    }
+
+    public Integer getVoteCount() {
+        return voteCount;
+    }
+
+    public void setVoteCount(Integer voteCount) {
+        this.voteCount = voteCount;
+    }
+
 }

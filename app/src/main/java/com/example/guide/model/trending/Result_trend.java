@@ -1,4 +1,4 @@
-package com.example.guide.model;
+package com.example.guide.model.trending;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

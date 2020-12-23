@@ -43,4 +43,19 @@ dependencies {
     annotationProcessor 'com.github.bumptech.glide:compiler:4.11.0'
 
     implementation 'com.github.shadowalker77:wp7progressbar:1.0.5'
+
+
+
+
+    implementation "androidx.room:room-runtime:2.2.6"
+    annotationProcessor "androidx.room:room-compiler:2.2.6"
+
+    // optional - RxJava support for Room
+    implementation "androidx.room:room-rxjava2:2.2.6"
+
+    // optional - Guava support for Room, including Optional and ListenableFuture
+    implementation "androidx.room:room-guava:2.2.6"
+
+    // optional - Test helpers
+    testImplementation "androidx.room:room-testing:2.2.6"
 }

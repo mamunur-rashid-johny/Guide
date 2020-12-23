@@ -1,8 +1,8 @@
 package com.example.guide.webservices;
 
-import com.example.guide.model.Movie;
-import com.example.guide.model.Trend;
-import com.example.guide.model.Tv;
+import com.example.guide.model.movie.Movie;
+import com.example.guide.model.trending.Trend;
+import com.example.guide.model.tv.Tv;
 import com.example.guide.model.detail_movie.MovieDetail;
 import com.example.guide.model.tv_detail.TvDeatilModel;
 

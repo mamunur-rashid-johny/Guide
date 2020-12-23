@@ -1,4 +1,4 @@
-package com.example.guide;
+package com.example.guide.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.guide.R;
 import com.example.guide.helper.Constant;
 import com.example.guide.model.detail_movie.Genre;
 import com.example.guide.model.detail_movie.MovieDetail;

@@ -1,4 +1,4 @@
-package com.example.guide;
+package com.example.guide.activity;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -7,28 +7,27 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
-import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.guide.R;
 import com.example.guide.adaptar.MovieAdaptar;
 import com.example.guide.adaptar.TrendAdaptar;
 import com.example.guide.adaptar.TvAdapter;
 import com.example.guide.helper.Constant;
 import com.example.guide.helper.NetworkReceiver;
-import com.example.guide.model.Movie;
-import com.example.guide.model.Result;
-import com.example.guide.model.Result_trend;
-import com.example.guide.model.Trend;
-import com.example.guide.model.Tv;
-import com.example.guide.model.TvResult;
+import com.example.guide.model.movie.Movie;
+import com.example.guide.model.movie.Result;
+import com.example.guide.model.trending.Result_trend;
+import com.example.guide.model.trending.Trend;
+import com.example.guide.model.tv.Tv;
+import com.example.guide.model.tv.TvResult;
 import com.example.guide.webservices.ApiClient;
 import com.example.guide.webservices.ApiInterface;
 
 import java.util.List;
 
 import ir.alirezabdn.wp7progress.WP10ProgressBar;
-import ir.alirezabdn.wp7progress.WP7ProgressBar;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -147,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
                 if (response.isSuccessful()){
                     results = response.body().getResults();
                     popmovie.setText("Popular Movies");
-                    Log.e("test case",results.get(0).getOriginalTitle());
+                    Log.e("test case",results.get(0).getOriginalTitle() +results.get(0).getId().toString());
                     movieAdaptar = new MovieAdaptar(results,MainActivity.this);
                     movie_rec.setAdapter(movieAdaptar);
                 }

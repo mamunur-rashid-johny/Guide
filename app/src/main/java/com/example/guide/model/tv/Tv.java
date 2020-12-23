@@ -1,17 +1,17 @@
-package com.example.guide.model;
+package com.example.guide.model.tv;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class Trend {
+public class Tv {
     @SerializedName("page")
     @Expose
     private Integer page;
     @SerializedName("results")
     @Expose
-    private List<Result_trend> results = null;
+    private List<TvResult> tvresults = null;
     @SerializedName("total_pages")
     @Expose
     private Integer totalPages;
@@ -27,12 +27,12 @@ public class Trend {
         this.page = page;
     }
 
-    public List<Result_trend> getResults() {
-        return results;
+    public List<TvResult> getResults() {
+        return tvresults;
     }
 
-    public void setResults(List<Result_trend> results) {
-        this.results = results;
+    public void setResults(List<TvResult> tvresults) {
+        this.tvresults = tvresults;
     }
 
     public Integer getTotalPages() {
@@ -50,5 +50,4 @@ public class Trend {
     public void setTotalResults(Integer totalResults) {
         this.totalResults = totalResults;
     }
-
 }

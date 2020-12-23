@@ -8,17 +8,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.guide.R;
-import com.example.guide.Tv_Detail;
+import com.example.guide.activity.Tv_Detail;
 import com.example.guide.helper.Constant;
-import com.example.guide.model.TvResult;
+import com.example.guide.model.tv.TvResult;
 
 import java.util.List;
 
