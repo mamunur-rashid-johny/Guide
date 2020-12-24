@@ -106,15 +106,15 @@
             android:layout_below="@id/doverview"/>
 
         <ImageView
-            android:id="@+id/dwatchList"
+            android:id="@+id/maddwatchList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_plus"
             android:layout_alignParentEnd="true"
             android:layout_margin="10dp"
-            android:visibility="visible"/>
+            android:visibility="invisible"/>
         <ImageView
-            android:id="@+id/dremoveWatchList"
+            android:id="@+id/mremoveWatchList"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/ic_check"
@@ -124,8 +124,8 @@
         <ImageView
             android:id="@+id/backImage"
             android:layout_margin="15dp"
-            android:layout_width="30dp"
-            android:layout_height="20dp"
-            android:src="@drawable/ic_baseline_arrow_back_24"/>
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_left_arrow"/>
     </RelativeLayout>
 </androidx.core.widget.NestedScrollView>

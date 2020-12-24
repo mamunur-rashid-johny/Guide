@@ -4,9 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -16,6 +19,7 @@ import com.example.guide.adaptar.TrendAdaptar;
 import com.example.guide.adaptar.TvAdapter;
 import com.example.guide.helper.Constant;
 import com.example.guide.helper.NetworkReceiver;
+import com.example.guide.local_db.AppDatabase;
 import com.example.guide.model.movie.Movie;
 import com.example.guide.model.movie.Result;
 import com.example.guide.model.trending.Result_trend;
@@ -43,6 +47,8 @@ public class MainActivity extends AppCompatActivity {
     List<TvResult> tvResults;
     List<Result_trend> result_trends;
     WP10ProgressBar progressBar;
+    ImageView bookmark;
+    AppDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -70,6 +76,18 @@ public class MainActivity extends AppCompatActivity {
             Toast.makeText(this,"Sorry! Not connected to internet", Toast.LENGTH_SHORT).show();
         }
 
+        bookmark.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (db.infoDao().getAll()==null){
+                    Toast.makeText(MainActivity.this,"Don't Have any Watch List!",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    startActivity(new Intent(MainActivity.this,WatchList.class));
+                }
+            }
+        });
+
 
     }
 
@@ -82,6 +100,8 @@ public class MainActivity extends AppCompatActivity {
         poptv = findViewById(R.id.tname);
         trending = findViewById(R.id.trendtitle);
         progressBar = findViewById(R.id.wp7progressBar);
+        bookmark = findViewById(R.id.bookmark);
+        db = AppDatabase.getDbIntance(MainActivity.this);
     }
 
     private void getTrendingList() {

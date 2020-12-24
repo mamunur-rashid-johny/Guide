@@ -1,9 +1,8 @@
-package com.example.guide.db;
+package com.example.guide.local_db;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
-import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
 import java.util.List;
@@ -17,8 +16,8 @@ public interface InfoDao {
     @Insert()
     void insertInfo(Info info);
 
-    @Query("DELETE FROM info WHERE info_id = :info_id")
-    void deleteInfo(int info_id);
+    @Delete
+    void deleteUser(Info info);
 
     @Query("SELECT * FROM info WHERE info_id=:info_id ")
     int getData(int info_id);
